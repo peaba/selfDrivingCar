@@ -1,0 +1,8 @@
+prefix=/home/peaba/peaba_ws/install
+
+Name: simulation_env
+Description: Description of simulation_env
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

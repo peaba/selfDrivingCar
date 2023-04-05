@@ -1,0 +1,8 @@
+prefix=/home/peaba/peaba_ws/devel
+
+Name: final_sim
+Description: Description of final_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

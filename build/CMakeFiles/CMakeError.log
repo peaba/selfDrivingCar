@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/peaba/peaba_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_85642/fast"
+/usr/bin/make -f CMakeFiles/cmTC_85642.dir/build.make CMakeFiles/cmTC_85642.dir/build
+make[1]: Entering directory '/home/peaba/peaba_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_85642.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_85642.dir/CheckSymbolExists.c.o   -c /home/peaba/peaba_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_85642
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85642.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_85642.dir/CheckSymbolExists.c.o  -o cmTC_85642 
+CMakeFiles/cmTC_85642.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_85642.dir/build.make:97: recipe for target 'cmTC_85642' failed
+make[1]: *** [cmTC_85642] Error 1
+make[1]: Leaving directory '/home/peaba/peaba_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_85642/fast' failed
+make: *** [cmTC_85642/fast] Error 2
+
+File /home/peaba/peaba_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/peaba/peaba_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0ea64/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0ea64.dir/build.make CMakeFiles/cmTC_0ea64.dir/build
+make[1]: Entering directory '/home/peaba/peaba_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0ea64.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0ea64.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0ea64
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ea64.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_0ea64.dir/CheckFunctionExists.c.o  -o cmTC_0ea64 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0ea64.dir/build.make:97: recipe for target 'cmTC_0ea64' failed
+make[1]: *** [cmTC_0ea64] Error 1
+make[1]: Leaving directory '/home/peaba/peaba_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0ea64/fast' failed
+make: *** [cmTC_0ea64/fast] Error 2
+
+

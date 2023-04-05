@@ -1,0 +1,2 @@
+fastslam_localization:final_sim:lab2:lab3:lab6:rplidar_ros:simulation_env:turtle_1
+-DCATKIN_DEVEL_PREFIX=/home/peaba/peaba_ws/devel -DCMAKE_INSTALL_PREFIX=/home/peaba/peaba_ws/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/peaba/peaba_ws/install
+
+Name: turtle_1
+Description: Description of turtle_1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
